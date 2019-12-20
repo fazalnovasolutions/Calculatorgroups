@@ -1,5 +1,5 @@
 <div class="calculators">
-    <div >
+    <div>
         <h4> Calculators</h4>
         @foreach($calculators as $calculator)
             <div class="grp-cal">

@@ -7,8 +7,6 @@
                 <input type="radio"  id="{{$group->id}}" name="customRadio" class="custom-control-input groups">
                 <label class="custom-control-label" for="{{$group->id}}">{{$group->title}}</label>
             </div>
-
-
         </div>
         @endif
 </div>
