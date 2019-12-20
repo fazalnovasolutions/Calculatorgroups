@@ -12,6 +12,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
+                        @if(count($calculators) > 0)
                         <div class="table-responsive">
                             <table class="table" style="max-width: 100%">
                                 <thead>
@@ -20,7 +21,7 @@
                                 <th style="text-align: right; padding-right: 50px">Action</th>
                                 </thead>
                                 <tbody>
-                                @if(count($calculators) > 0)
+
                                     @foreach($calculators as $calculator)
                                         <tr>
                                             <td>
@@ -39,10 +40,13 @@
                                             </td>
                                         </tr>
                                         @endforeach
-                                    @endif
+
                                 </tbody>
                             </table>
                         </div>
+                        @else
+                            <p>No Calculator Found</p>
+                        @endif
 
                     </div>
                 </div>

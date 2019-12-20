@@ -6,13 +6,13 @@
                 <div class="row" style="padding-bottom: 25px">
                     <h3 class=" col-md-10">Products</h3>
                     <div class="col-md-2" align="right">
-                        <a href="{{route('products.sync')}}" class="btn btn-primary " align="right"> Sync Products </a>
+                        <a href="{{route('products.sync')}}" id="sync-product-button" class="btn btn-primary " align="right"> Sync Products </a>
 
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-body">
-
+                        @if(count($products) > 0)
                         <div class="data-tables">
                             <table class=" table text-center">
                                 <thead class="bg-light text-capitalize">
@@ -24,7 +24,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @if(!empty($products))
+
                                     @foreach($products as $key => $product)
                                         <tr>
                                             <td>
@@ -40,7 +40,7 @@
 
                                     @endforeach
 
-                                @endif
+
                                 </tbody>
                             </table>
 
@@ -49,17 +49,26 @@
                             <div  class="col-md-4">
                                 <ul class="pagination pagination-md">
                                     {{$products->links()}}
-
-
                                 </ul>
-
                             </div>
                         </div>
+                            @else
+                            <p> No Products Found</p>
+                        @endif
 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="{{asset('argon/assets/js/vendor/jquery-2.2.4.min.js')}}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('#sync-product-button').click(function () {
+                $('.main-content-inner').addClass('loading');
+            })
+        });
+
+    </script>
 
 @endsection

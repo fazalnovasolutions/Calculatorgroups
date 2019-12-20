@@ -14,15 +14,15 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', function () {
-    return view('welcome');
-})->middleware(['auth.shop'])->name('home');
+//Route::get('/', function () {
+//    return view('welcome');
+//})->middleware(['auth.shop'])->name('home');
 
 //
 
 Route::middleware('auth.shop')->group(function () {
 
-    Route::get('/dashboard', 'Calculators@Dashboard')->name('calculator.dashboard');
+    Route::get('/dashboard', 'Calculators@Dashboard')->name('home');
     Route::get('/products', 'Calculators@getProducts')->name('products');
 
     Route::get('/calculators', 'Calculators@getCalculators')->name('calculators');

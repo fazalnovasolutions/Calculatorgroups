@@ -48,9 +48,8 @@
 
                                                 </div>
                                             </div>
-
-                                                    @if(!empty($detail))
-                                                        @foreach($detail["products"] as $product)
+                                            @if(!empty($detail))
+                                                @foreach($detail["products"] as $product)
                                                             <div class="row" style="padding: 5px;border-top: 1px solid rgba(0,0,0,.1)" id="div-pro-{{$product->product_id}}">
                                                                 <div class="col-md-1 " style="padding: 20px ">
                                                                     <div class="custom-control custom-checkbox ">
@@ -69,6 +68,7 @@
                                                                     <h6>{{$product->title}} </h6>
                                                                 </div>
                                                             </div>
+
                                                             @foreach($detail["variants"] as $key => $variant )
                                                                 @if($product->product_id == $variant->product_id)
                                                                     <div class="row" style="padding: 5px;border-top: 1px solid rgba(0,0,0,.1)" id="div-var-{{$variant->variant_id}}">
@@ -106,8 +106,7 @@
                                                                 @endif
                                                             @endforeach
                                                           @endforeach
-                                                        @endif
-
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

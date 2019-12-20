@@ -22,11 +22,13 @@ class Calculators extends Controller
    public function  dashboard(){
        $shop=ShopifyApp::shop();
         $products_count= $shop->api()->rest('GET', '/admin/api/2019-10/products/count.json');
+        $sync_products = count(Product::where('shop_id',$shop->id)->get());
 
        $calculator_count=count(Calculator::all());
        return view('dashboard')->with([
            'products'=>$products_count->body->count,
-           'calculators'=>$calculator_count
+           'calculators'=>$calculator_count,
+           'sync' => $sync_products
        ]);
    }
 

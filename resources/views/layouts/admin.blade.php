@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{asset('argon/assets/css/styles.css')}}">
     <link rel="stylesheet" href="{{asset('argon/assets/css/responsive.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
     <script src="{{asset('argon/assets/js/vendor/modernizr-2.8.3.min.js')}}" type="336a54725e1001768da42d39-text/javascript"></script>
 </head>
 <body>
@@ -34,7 +36,7 @@
     <div class="sidebar-menu">
         <div class="sidebar-header">
             <div class="logo" style="display:flex;padding-left: 25px">
-                <h3><a href="{{route('calculator.dashboard')}}">Soundstop</a></h3>
+                <h3><a href="{{route('home')}}">Soundstop</a></h3>
             </div>
         </div>
         <div class="main-menu">
@@ -42,9 +44,9 @@
                 <nav>
                     <ul class="metismenu" id="menu">
                         <li class="active">
-                            <a href="{{route('calculator.dashboard')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            <a href="{{route('home')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                         </li>
-                        <li @if(!empty($products))class="active"@endif>
+                        <li {{--@if(!empty($products))class="active"@endif--}}>
                             <a href="{{route('products')}}" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Products</span></a>
                         </li>
                         <li>
@@ -90,7 +92,7 @@
                     <div class="breadcrumbs-area clearfix">
                         <h4 class="page-title pull-left">Dashboard</h4>
                         <ul class="breadcrumbs pull-left">
-                            <li><a href="{{route('calculator.dashboard')}}">Home</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
                             <li><span>Dashboard</span></li>
                         </ul>
                     </div>

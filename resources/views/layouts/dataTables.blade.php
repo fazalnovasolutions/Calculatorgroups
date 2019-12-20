@@ -46,7 +46,7 @@
     <div class="sidebar-menu">
         <div class="sidebar-header">
             <div class="logo" style="display:flex;padding-left: 25px">
-                <h3><a href="{{route('calculator.dashboard')}}">Soundstop</a></h3>
+                <h3><a href="{{route('home')}}">Soundstop</a></h3>
             </div>
         </div>
         <div class="main-menu">
@@ -54,7 +54,7 @@
                 <nav>
                     <ul class="metismenu" id="menu">
                         <li class="active">
-                            <a href="{{route('calculator.dashboard')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
+                            <a href="{{route('home')}}" aria-expanded="true"><i class="ti-dashboard"></i><span>Dashboard</span></a>
                         </li>
                         <li @if(!empty($products))class="active"@endif>
                             <a href="{{route('products')}}" aria-expanded="true"><i class="ti-layout-sidebar-left"></i><span>Products</span></a>
@@ -100,7 +100,7 @@
                     <div class="breadcrumbs-area clearfix">
                         <h4 class="page-title pull-left">Dashboard</h4>
                         <ul class="breadcrumbs pull-left">
-                            <li><a href="{{route('calculator.dashboard')}}">Home</a></li>
+                            <li><a href="{{route('home')}}">Home</a></li>
                             <li><span>Dashboard</span></li>
                         </ul>
                     </div>
@@ -152,7 +152,8 @@
 <script src="{{asset('argon/ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js')}}" data-cf-settings="336a54725e1001768da42d39-|49" defer=""></script></body>
 <script>
     $(document).ready(function(){
-           var  base_url="http://127.0.0.1:8000/";
+           // var  base_url="http://127.0.0.1:8000/";
+           var base_url = "https://calculators.shopifyapplications.com/"
         $('#selectproducts').click(function () {
              var   quantity="";
             var variant_id = $('.variants:checkbox:checked').map(function() {
