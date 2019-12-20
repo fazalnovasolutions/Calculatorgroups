@@ -94,6 +94,7 @@
       <path value="$PROJECT_DIR$/vendor/ohmybrew/laravel-shopify" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-cors" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
