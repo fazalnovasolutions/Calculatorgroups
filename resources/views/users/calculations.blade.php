@@ -44,7 +44,7 @@
 
     </div>
 
-    <form method="POST" action="http://127.0.0.1:8000/save/calculations" id="calculations_save">
+    <form method="POST" action="save/calculations" id="calculations_save">
     @csrf
 
     <div class="calculation_result" id="calculation_result">
